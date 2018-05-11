@@ -1,5 +1,6 @@
 package com.springboot.web;
 
+import com.springboot.obj.User;
 import io.swagger.annotations.ApiOperation;
 
 import org.slf4j.Logger;
@@ -13,9 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+
    @ApiOperation("hello world")
    @RequestMapping("/hello")
    public String hello(){
       return "hello";
+
    }
 }
