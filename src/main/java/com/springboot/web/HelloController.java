@@ -19,6 +19,7 @@ public class HelloController {
    @ApiOperation("hello world")
    @RequestMapping("/hello")
    public String hello(){
+      logger.info("test info");
       return "hello";
 
    }
