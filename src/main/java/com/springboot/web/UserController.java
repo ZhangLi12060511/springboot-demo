@@ -25,7 +25,7 @@ public class UserController {
     UserService userService;
 
     @ApiOperation("获取用户信息")
-    @RequestMapping("/user")
+    @RequestMapping("/user.json")
     public Map<String,Object> getUser(@ApiParam(value = "用户id",required = true) Integer id
             ,ModelAndView modelAndView)  {
         User user = userService.selectByPrimaryKey(id);
