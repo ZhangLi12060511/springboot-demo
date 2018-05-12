@@ -18,8 +18,6 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-
-
     <dependencies>
         <!--springboot相关依赖包  !-->
         <dependency>
