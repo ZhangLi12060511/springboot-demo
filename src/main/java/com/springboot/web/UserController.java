@@ -1,6 +1,5 @@
 package com.springboot.web;
 
-import com.alibaba.fastjson.JSONObject;
 import com.springboot.exception.ServiceExcetion;
 import com.springboot.obj.User;
 import com.springboot.provider.PasswordProvider;
@@ -18,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author zhangbenben on 2018/5/12 0012
@@ -168,8 +169,6 @@ public class UserController {
         modelAndView.addObject("SUCCESS_MESSAGE",Constants.SUCCESS_MESSAGE);
 
         return modelAndView.getModel();
-
-
         }
 
 }

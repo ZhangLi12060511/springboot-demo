@@ -56,4 +56,6 @@ public interface UserDao  {
      */
     int  deleteByList(@Param("idList") List<Integer> idList);
 
+
+
 }

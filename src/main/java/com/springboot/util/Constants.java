@@ -21,7 +21,10 @@ public class Constants {
      * 返回正确信息
      */
     public static final String SUCCESS_MESSAGE = "返回信息正确";
-
+    /**
+     * 用户不存在
+     */
+    public static final String USER_NULL = "用户不存在";
 
 
 }
