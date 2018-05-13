@@ -5,4 +5,23 @@
     <select id="selectByPrimaryKey" resultType="com.springboot.obj.User" parameterType="Integer">
         select * from user WHERE  id=#{id};
     </select>
+    <select id="selectByName" resultType="com.springboot.obj.User" parameterType="String">
+        select * from user WHERE  name=#{name};
+    </select>
+    <insert id="insert"  parameterType="com.springboot.obj.User" >
+        insert  into user(name,password) values (#{name},#{password});
+    </insert>
+    <delete id="deleteById" parameterType="Integer">
+        delete  from user where id=#{id};
+    </delete>
+    <update id="update" parameterType="com.springboot.obj.User" >
+        update user  set name =#{name},password=#{password} where id=#{id};
+    </update>
+    <delete id="deleteByList" parameterType="java.util.List">
+        delete from user where id in
+        <foreach collection="idList" index="index" item="item" open="(" separator="," close=")">
+            #{item}</foreach>
+
+
+    </delete>
 </mapper>
