@@ -3,6 +3,7 @@ package com.springboot.web;
 import com.springboot.exception.ServiceExcetion;
 import com.springboot.obj.User;
 import com.springboot.provider.PasswordProvider;
+import com.springboot.rabbit.Sender;
 import com.springboot.service.UserService;
 import com.springboot.util.Constants;
 import com.springboot.util.RedisUtil;
@@ -34,6 +35,8 @@ public class AdminController {
     private UserService userService;
     @Autowired
     private RedisTemplate<String,Object> redisTemplate;
+    @Autowired
+    Sender sender;
 
 
     @ApiOperation("用户登陆")
@@ -60,6 +63,7 @@ public class AdminController {
         if(redisTemplate.hasKey("test")){
             modelAndView.addObject("successMsg","登录成功");
             modelAndView.addObject("successCode",Constants.SUCCESS_CODE);
+            sender.send(redisTemplate.opsForValue().get("test"));
             return modelAndView.getModel();
         }
         user = userService.selectByName(name);
@@ -75,7 +79,7 @@ public class AdminController {
                 return modelAndView.getModel();
         }
         redisTemplate.opsForValue().set("test",user,3600,TimeUnit.SECONDS);
-
+        sender.send(user);
         modelAndView.addObject("successMsg","登录成功");
         modelAndView.addObject("successCode",Constants.SUCCESS_CODE);
         return  modelAndView.getModel();
