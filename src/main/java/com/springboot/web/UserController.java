@@ -1,5 +1,9 @@
 package com.springboot.web;
 
+<<<<<<< HEAD
+=======
+import com.alibaba.fastjson.JSONObject;
+>>>>>>> 107fb41... 增删改查初步已经完成，增加了相关的工具类
 import com.springboot.exception.ServiceExcetion;
 import com.springboot.obj.User;
 import com.springboot.provider.PasswordProvider;
@@ -17,9 +21,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+<<<<<<< HEAD
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+=======
+import java.util.*;
+>>>>>>> 107fb41... 增删改查初步已经完成，增加了相关的工具类
 
 /**
  * @author zhangbenben on 2018/5/12 0012
@@ -169,6 +177,11 @@ public class UserController {
         modelAndView.addObject("SUCCESS_MESSAGE",Constants.SUCCESS_MESSAGE);
 
         return modelAndView.getModel();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 107fb41... 增删改查初步已经完成，增加了相关的工具类
         }
 
 }

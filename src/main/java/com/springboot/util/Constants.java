@@ -21,10 +21,14 @@ public class Constants {
      * 返回正确信息
      */
     public static final String SUCCESS_MESSAGE = "返回信息正确";
+<<<<<<< HEAD
     /**
      * 用户不存在
      */
     public static final String USER_NULL = "用户不存在";
+=======
+
+>>>>>>> 107fb41... 增删改查初步已经完成，增加了相关的工具类
 
 
 }

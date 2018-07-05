@@ -55,7 +55,10 @@ public interface UserDao  {
      * @description:
      */
     int  deleteByList(@Param("idList") List<Integer> idList);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 107fb41... 增删改查初步已经完成，增加了相关的工具类
 
 }
